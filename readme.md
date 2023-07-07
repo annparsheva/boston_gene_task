@@ -1,9 +1,23 @@
 # Тестовое задание DataEngineer (Benchling)
 ## Описание
 Необходимо разработать сервис по выгрузке отчета в формате csv из базы данных Benchling.csv на python.
+## Установка
+```
+git clone https://github.com/annparsheva/boston_gene_task
+cd report_builder
+docker build -t report_builder .
+```
 ## Запуск
 ```
-python3 main.py --project 'HRD validation'
+docker run -t -v ${PWD}:/app report_builder 'HRD validation'
+```
+## Просмотр результатов
+```
+cat result/report_20230707_13:52:31.csv
+```
+## Просмотр лога
+```
+cat report_building.log
 ```
 ## Модули
 ### GetReseqTopOff
@@ -37,4 +51,4 @@ Library concentration от 10 до 100 - pass, иначе failed.
 * **get_project_data** - фильтрует базу данных по имени проекта.
 * **save_data** - сохраняет итоговый отчет.
 
-**data_base_analysis.ipynb** - документ с аналитикой базы данных.
+**data_base_analysis.pdf** - документ с аналитикой базы данных.
