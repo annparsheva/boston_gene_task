@@ -1,0 +1,15 @@
+result_path: result
+result_columns:
+  - Run
+  - Sample sheet_Sample_ID
+  - Is it top off seq?
+  - Is it reseq?
+  - Sample target
+  - Library construction kit
+  - Library prob set kit
+  - Extract BG_ID
+  - "Library Lab_ID \n(unique)"
+  - QC
+data_path: data
+data_file: Benchling_updated.csv
+log_file: report_building.log
